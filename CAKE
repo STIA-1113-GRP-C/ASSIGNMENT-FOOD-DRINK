@@ -1,1 +1,159 @@
-...
+package Assignment_1;
+import java.util.Scanner;
+public class cake {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("*    *    *   * * *  *        * *       *       * * * * *   * * *   ");
+		System.out.println("*    *    *   *      *      *        *     *    *   *   *   *       ");
+		System.out.println("*   * *   *   * *    *     *       *         *  *   *   *   * *     ");
+		System.out.println(" * *   * *    *      *      *        *     *    *   *   *   *       ");
+		System.out.println("  *     *     * * *  * * *    * *       *       *   *   *   * * *   ");
+		
+		System.out.println();
+		
+		System.out.println("                        *         *        *                        ");
+		System.out.println("                      *   *     *   *    *   *                      ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *     *   *   *   *   *   *     *                  ");
+		System.out.println("                 * * *   *   *   *   *   *   * * *                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 * * * * * * * * * * * * * * * * *                  ");
+		System.out.println("                 *********************************                  ");
+		
+		System.out.println();
+		
+		System.out.println("This Programme Will Calculate The Mass or Number of Ingridients for 1 Month");
+		System.out.println();
+		
+		int cake_d, cake_m, egg, egg_s, total_egg, f_egg;
+		double flour, baking, ovallet, chocolate, sugar;
+		double flour_s, baking_s, ovallet_s, chocolate_s, sugar_s;
+		double total_flour, total_baking, total_ovallet, total_chocolate, total_sugar;
+		double f_flour, f_baking, f_ovallet, f_chocolate, f_sugar;
+		
+		System.out.print("Please enter your target of making cake in one day : ");
+		cake_d = sc.nextInt();
+		
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of ingredient for making 1 cake : ");
+		System.out.print("Flour in kg         : ");
+		flour = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate = sc.nextDouble();
+		
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of stock remaining in your store :");
+		System.out.print("Flour in kg         : ");
+		flour_s = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg_s = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar_s = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking_s = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet_s = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate_s = sc.nextDouble();
+		
+		cake_m = cake_d * 30;
+		
+		total_flour = flour * cake_m;
+		total_egg = egg * cake_m;
+		total_sugar = sugar * cake_m;
+		total_baking = baking * cake_m;
+		total_ovallet = ovallet * cake_m;
+		total_chocolate = chocolate * cake_m;
+		
+		f_flour = total_flour - flour_s;
+		f_egg = total_egg - egg_s;
+		f_sugar = total_sugar - sugar_s;
+		f_baking = total_baking - baking_s;
+		f_ovallet = total_ovallet - ovallet_s;
+		f_chocolate = total_chocolate - chocolate_s;
+		
+		System.out.println();
+		
+		System.out.println("The results    ");
+		System.out.println("Flour         : " + f_flour + " kg");
+		System.out.println("Eggs          : " + f_egg);
+		System.out.println("Sugar         : " + f_sugar + " kg");
+		System.out.println("Baking powder : " + f_baking + " kg");
+		System.out.println("Ovalette      : " + f_ovallet + " kg");
+		System.out.println("Chocolate     : " + f_chocolate + " kg");
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
+
+
+
+
+OUTPUT
+
+*    *    *   * * *  *        * *       *       * * * * *   * * *   
+*    *    *   *      *      *        *     *    *   *   *   *       
+*   * *   *   * *    *     *       *         *  *   *   *   * *     
+ * *   * *    *      *      *        *     *    *   *   *   *       
+  *     *     * * *  * * *    * *       *       *   *   *   * * *   
+
+                        *         *        *                        
+                      *   *     *   *    *   *                      
+                 *********************************                  
+                 *                               *                  
+                 *     *   *   *   *   *   *     *                  
+                 * * *   *   *   *   *   *   * * *                  
+                 *                               *                  
+                 *********************************                  
+                 * * * * * * * * * * * * * * * * *                  
+                 *********************************                  
+
+This Programme Will Calculate The Mass or Number of Ingridients for 1 Month
+
+Please enter your target of making cake in one day : 10
+
+Please enter the number or mass of ingredient for making 1 cake : 
+Flour in kg         : 0.35
+Eggs                : 2
+Sugar in kg         : 0.1
+Baking powder in kg : 0.01
+Ovallete in kg      : 0.01
+Chocolate in kg     : 0.1
+
+Please enter the number or mass of stock remaining in your store :
+Flour in kg         : 3
+Eggs                : 4
+Sugar in kg         : 2
+Baking powder in kg : 1
+Ovallete in kg      : 1
+Chocolate in kg     : 5
+
+The results    
+Flour         : 102.0 kg
+Eggs          : 596
+Sugar         : 28.0 kg
+Baking powder : 2.0 kg
+Ovalette      : 2.0 kg
+Chocolate     : 25.0 kg
+
