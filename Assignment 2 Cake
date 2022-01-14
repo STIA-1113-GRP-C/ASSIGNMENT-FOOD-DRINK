@@ -1,0 +1,266 @@
+package Assignment_2;
+import java.util.Scanner;
+public class cake {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("*    *    *   * * *  *        * *       *       * * * * *   * * *   ");
+		System.out.println("*    *    *   *      *      *        *     *    *   *   *   *       ");
+		System.out.println("*   * *   *   * *    *     *       *         *  *   *   *   * *     ");
+		System.out.println(" * *   * *    *      *      *        *     *    *   *   *   *       ");
+		System.out.println("  *     *     * * *  * * *    * *       *       *   *   *   * * *   ");
+		
+		System.out.println();
+		
+		System.out.println("                        *         *        *                        ");
+		System.out.println("                      *   *     *   *    *   *                      ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *     *   *   *   *   *   *     *                  ");
+		System.out.println("                 * * *   *   *   *   *   *   * * *                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 * * * * * * * * * * * * * * * * *                  ");
+		System.out.println("                 *********************************                  ");
+		
+		System.out.println();
+		
+		System.out.println("This Programme Will Calculate The Mass or Number of Ingridients for 1 Month");
+		System.out.println();
+		
+		int num, i = 0, num_s, total = 0, average;
+		int egg, egg_s, cake_m, total_egg, f_egg, g_egg; 
+		double flour, sugar, baking, ovallet, chocolate, flour_s, sugar_s, baking_s, ovallet_s, chocolate_s;
+		double total_flour, total_baking, total_ovallet, total_chocolate, total_sugar;
+		double f_flour, f_baking, f_ovallet, f_chocolate, f_sugar;
+		double g_flour, g_baking, g_ovallet, g_chocolate, g_sugar;
+		
+		System.out.println("Please enter the number of sale of the cake day by day in one week :");
+		
+		while(i < 7) {
+			System.out.print("Sale : ");
+			num = sc.nextInt();
+			total = total + num;
+			i = i + 1;
+			
+		}
+		System.out.println();
+		
+		System.out.println("The total of cake sale for one week is " + total);
+	    average = total / 7;
+	    System.out.println("The average of number cake sale for one day is " + average);
+	    
+
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of ingredient for making 1 cake : ");
+		System.out.print("Flour in kg         : ");
+		flour = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate = sc.nextDouble();
+		
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of stock remaining in your store :");
+		System.out.print("Flour in kg         : ");
+		flour_s = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg_s = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar_s = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking_s = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet_s = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate_s = sc.nextDouble();
+		
+        cake_m = average * 30;
+		
+		total_flour = flour * cake_m;
+		total_egg = egg * cake_m;
+		total_sugar = sugar * cake_m;
+		total_baking = baking * cake_m;
+		total_ovallet = ovallet * cake_m;
+		total_chocolate = chocolate * cake_m;
+		
+		f_flour = total_flour - flour_s;
+		f_egg = total_egg - egg_s;
+		f_sugar = total_sugar - sugar_s;
+		f_baking = total_baking - baking_s;
+		f_ovallet = total_ovallet - ovallet_s;
+		f_chocolate = total_chocolate - chocolate_s;
+		
+		System.out.println();
+		
+		System.out.println("The results    ");
+		System.out.println("Flour         : " + f_flour + " kg");
+		System.out.println("Eggs          : " + f_egg);
+		System.out.println("Sugar         : " + f_sugar + " kg");
+		System.out.println("Baking powder : " + f_baking + " kg");
+		System.out.println("Ovalette      : " + f_ovallet + " kg");
+		System.out.println("Chocolate     : " + f_chocolate + " kg");
+		
+		System.out.println();
+		
+		System.out.println("Do you want to add more the ingredient???");
+		System.out.println("If you want to add more the amount of the ingredient , please enter 1");
+		System.out.println("If you want to stay with the amount of the ingredient, please enter 0");
+		num_s = sc.nextInt();
+		
+		System.out.println();
+		
+		if(num_s > 0) 
+		{	
+			System.out.println("Flour         : " + f_flour + " kg");
+		    System.out.print("Please enter the new mass of flour in kg : ");
+		    g_flour = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Eggs          : " + f_egg);
+		    System.out.print("Please enter the new number of eggs : ");
+		    g_egg = sc.nextInt();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Sugar         : " + f_sugar + " kg");
+		    System.out.print("Please enter the new mass of sugar in kg : ");
+		    g_sugar = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Baking powder : " + f_baking + " kg");
+		    System.out.print("Please enter the new mass of baking powder in kg : ");
+		    g_baking = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Ovalette      : " + f_ovallet + " kg");
+		    System.out.print("Please enter the new mass of ovallet in kg : ");
+		    g_ovallet = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Chocolate     : " + f_chocolate + " kg");
+		    System.out.print("Please enter the new mass of chocolate in kg : ");
+		    g_chocolate = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("The final results    ");
+			System.out.println("Flour         : " + g_flour + " kg");
+			System.out.println("Eggs          : " + g_egg);
+			System.out.println("Sugar         : " + g_sugar + " kg");
+			System.out.println("Baking powder : " + g_baking + " kg");
+			System.out.println("Ovalette      : " + g_ovallet + " kg");
+			System.out.println("Chocolate     : " + g_chocolate + " kg");
+	    }
+		else {
+			System.out.println("The final results    ");
+		    System.out.println("Flour         : " + f_flour + " kg");
+		    System.out.println("Eggs          : " + f_egg);
+		    System.out.println("Sugar         : " + f_sugar + " kg");
+		    System.out.println("Baking powder : " + f_baking + " kg");
+		    System.out.println("Ovalette      : " + f_ovallet + " kg");
+		    System.out.println("Chocolate     : " + f_chocolate + " kg");
+		     }
+	}
+
+}
+
+OUTPUT
+*    *    *   * * *  *        * *       *       * * * * *   * * *   
+*    *    *   *      *      *        *     *    *   *   *   *       
+*   * *   *   * *    *     *       *         *  *   *   *   * *     
+ * *   * *    *      *      *        *     *    *   *   *   *       
+  *     *     * * *  * * *    * *       *       *   *   *   * * *   
+
+                        *         *        *                        
+                      *   *     *   *    *   *                      
+                 *********************************                  
+                 *                               *                  
+                 *     *   *   *   *   *   *     *                  
+                 * * *   *   *   *   *   *   * * *                  
+                 *                               *                  
+                 *********************************                  
+                 * * * * * * * * * * * * * * * * *                  
+                 *********************************                  
+
+This Programme Will Calculate The Mass or Number of Ingridients for 1 Month
+
+Please enter the number of sale of the cake day by day in one week :
+Sale : 9
+Sale : 7
+Sale : 8
+Sale : 7
+Sale : 9
+Sale : 8
+Sale : 7
+
+The total of cake sale for one week is 55
+The average of number cake sale for one day is 7
+
+Please enter the number or mass of ingredient for making 1 cake : 
+Flour in kg         : 0.3
+Eggs                : 2
+Sugar in kg         : 0.1
+Baking powder in kg : 0.01
+Ovallete in kg      : 0.01
+Chocolate in kg     : 0.1
+
+Please enter the number or mass of stock remaining in your store :
+Flour in kg         : 2
+Eggs                : 3
+Sugar in kg         : 1
+Baking powder in kg : 1
+Ovallete in kg      : 1
+Chocolate in kg     : 4
+
+The results    
+Flour         : 61.0 kg
+Eggs          : 417
+Sugar         : 20.0 kg
+Baking powder : 1.1 kg
+Ovalette      : 1.1 kg
+Chocolate     : 17.0 kg
+
+Do you want to add more the ingredient???
+If you want to add more the amount of the ingredient , please enter 1
+If you want to stay with the amount of the ingredient, please enter 0
+1
+
+Flour         : 61.0 kg
+Please enter the new mass of flour in kg : 65
+
+Eggs          : 417
+Please enter the new number of eggs : 420
+
+Sugar         : 20.0 kg
+Please enter the new mass of sugar in kg : 25
+
+Baking powder : 1.1 kg
+Please enter the new mass of baking powder in kg : 2
+
+Ovalette      : 1.1 kg
+Please enter the new mass of ovallet in kg : 2
+
+Chocolate     : 17.0 kg
+Please enter the new mass of chocolate in kg : 20
+
+The final results    
+Flour         : 65.0 kg
+Eggs          : 420
+Sugar         : 25.0 kg
+Baking powder : 2.0 kg
+Ovalette      : 2.0 kg
+Chocolate     : 20.0 kg
